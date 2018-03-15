@@ -1,0 +1,66 @@
+#project mystory
+// Notes
+// =====
+/*
+Add notes here.
+Default document properties that are added to all collections:
+  .userId #type String
+  .createdBy #type String
+  .createdDate #type Date
+  .lastModifiedDate #type Date
+*/
+// Account creation and authentication
+// ===================================
+#sign-up Email
+// Roles & User Stories
+// ====================
+#as StoryTeller create an account
+#as StoryTeller login
+#as StoryTeller create my story
+#as StoryTeller read my story
+#as StoryTeller edit my story
+#as StoryTeller delete my story
+#as StoryTeller save but not publish my story
+#as StoryTeller publish my story
+// If user does not have location based services turned on, 
+// then the user must enter the address for the story
+#as StoryTeller automatically track the lat, long of where I'm writing my story
+#as Viewer share a story via a link
+#as Viewer read a story
+#as Viewer see all stories based on date
+#as Viewer see all stories based on time
+#as Viewer see all stories based on location
+#as Viewer see all stories based on keyword
+// Data Model
+// ==========
+@Profiles
+.firstName #type Text #sign-up-field
+.lastName #type Text #sign-up-field
+.userEmail #type Email #hidden #sign-up-field
+.alias #type Text
+.gender #type Text
+..male
+..female
+.dob #type Date
+.role #type Text #sign-up-field
+..StoryTeller
+.agreeToTermsAndConditions #type YesNo #hidden #sign-up-field
+// ----------------------------------------------
+@Stories
+.profileId #type Id
+.title #type Text
+.text #type Note
+.lat #type Decimal #optional
+.long #type Decimal #optional
+.address1 #type Text
+.addres2 #type Text #optional
+.cityProvince #type Text
+.stateRegion #type Text
+.zipPostalCode #type Text
+.countryId #type Id
+.storyDateTime #type DateTime
+.isPublished #type YesNo #default-value false
+// ----------------------------------------------
+@Countries
+.name
+// ----------------------------------------------

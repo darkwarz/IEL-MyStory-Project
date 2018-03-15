@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MyStory - Login</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            font-size: 0.9em;
+        }
+
+        header, footer {
+            padding: 10px;
+            color: white;
+            background-color: black;
+            width: 100%
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+        }
+
+        section {
+            margin: 5px auto;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+
+        article {
+            margin: 5px;
+            padding: 10px;
+            background-color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav ul {
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 5px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .login-info {
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MyStory</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Login</li>
+            <li>Sign Up</li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <h2>Login</h2>
+            <!-- Email HTML code -->
+            <div class="login-info">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter your email here" />
+            </div>
+            <!-- Password HTML code -->
+            <div class="login-info">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter your password here" />
+            </div>
+            <div class="login-info">
+                <a href="forgot-password.html">Forgot Password?</a>
+            </div>
+            <input id="login-button" type="button" value="Login" />
+        </article>
+    </section>
+    <footer style="position: fixed;">
+        <p>&copy; 2018 MyStory. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
